@@ -12,7 +12,7 @@ import './styles/global.css';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ThemeProvider>
         <ScrollToTop />
         <Cursor />
@@ -26,7 +26,7 @@ function App() {
           </Route>
         </Routes>
       </ThemeProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
