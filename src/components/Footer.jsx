@@ -5,7 +5,7 @@ export default function Footer() {
     <footer>
       <div className="footer-inner">
         <div className="footer-brand">
-          <Link to="/" className="logo"><span className="logo-dot"></span>Nexora</Link>
+          <Link to="/" className="logo logo-img"><img src={`${import.meta.env.BASE_URL}LOGO_NEXORA.png`} alt="Nexora Studio" /></Link>
           <p>Studio digital basé à Abidjan. <em>Avec nous, chaque ligne de code est une histoire.</em></p>
         </div>
         <div className="footer-col">
