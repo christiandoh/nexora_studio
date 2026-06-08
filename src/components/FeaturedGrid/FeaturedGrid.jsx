@@ -4,11 +4,14 @@ import Card from './Card';
 import Modal from './Modal';
 import SectionReveal from '../SectionReveal';
 
+const base = import.meta.env.BASE_URL;
+const img = (path) => `${base}${path.replace(/^\//, '')}`;
+
 const projects = [
   {
     id: 1,
-    img: '/opencode.jpg',
-    imgFull: '/opencode.jpg',
+    img: img('/opencode.jpg'),
+    imgFull: img('/opencode.jpg'),
     title: 'OpenCode — Agent de codage IA',
     desc: 'Assistant de codage open source qui comprend votre codebase et vous aide à coder plus vite depuis le terminal. 160K stars GitHub, 7,5M devs/mois.',
     stats: '160K ★ · 7,5M devs · Open source',
@@ -16,8 +19,8 @@ const projects = [
   },
   {
     id: 2,
-    img: '/hermes_agent.jpg',
-    imgFull: '/hermes_agent.jpg',
+    img: img('/hermes_agent.jpg'),
+    imgFull: img('/hermes_agent.jpg'),
     title: 'Hermes Agent — Automation intelligente',
     desc: 'Agent IA multi-tâches pour l\'automatisation des processus métier. Planification, exécution et reporting automatisés pour entreprises et PME.',
     stats: 'Multi-agent · Workflow · Cloud',
@@ -25,8 +28,8 @@ const projects = [
   },
   {
     id: 3,
-    img: '/openclaw.jpg',
-    imgFull: '/openclaw.jpg',
+    img: img('/openclaw.jpg'),
+    imgFull: img('/openclaw.jpg'),
     title: 'OpenClaw — Assistant IA personnel',
     desc: 'IA qui agit vraiment : gère vos emails, calendrier, réservations. Depuis WhatsApp, Telegram ou tout chat. 24/7, persistant, privé.',
     stats: 'WhatsApp · Telegram · 24/7',
@@ -34,8 +37,8 @@ const projects = [
   },
   {
     id: 4,
-    img: '/configuration_IA_SUR_MESUR.jpg',
-    imgFull: '/configuration_IA_SUR_MESUR.jpg',
+    img: img('/configuration_IA_SUR_MESUR.jpg'),
+    imgFull: img('/configuration_IA_SUR_MESUR.jpg'),
     title: 'Configuration IA sur mesure',
     desc: 'Déploiement et configuration d\'agents IA pour entreprises : OpenClaw, Hermes, OpenCode, n8n. Automatisation complète des flux de travail.',
     stats: 'Déploiement · Sur mesure · Support',
@@ -43,8 +46,8 @@ const projects = [
   },
   {
     id: 5,
-    img: '/AUTOMATISATION_IA.jpg',
-    imgFull: '/AUTOMATISATION_IA.jpg',
+    img: img('/AUTOMATISATION_IA.jpg'),
+    imgFull: img('/AUTOMATISATION_IA.jpg'),
     title: 'Automatisation pour particuliers',
     desc: 'Agents IA pour particuliers : gestion des emails, planification, rappels, recherches web, automatisation des tâches quotidiennes.',
     stats: 'Personnel · 24/7 · Privé',
