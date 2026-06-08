@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://christiandoh.github.io/nexora_studio">
-    <img src="public/opencode.jpg" alt="Nexora Studio" width="120" style="border-radius: 16px;" />
+    <img src="public/LOGO_NEXORA.png" alt="Nexora Studio" width="120" style="border-radius: 16px;" />
   </a>
 </p>
 
