@@ -944,6 +944,12 @@ body.desktop .cursor-ring { display: block; }
   color: #fff;
   flex-shrink: 0;
 }
+.t-avatar-img {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
 .av1 { background: linear-gradient(135deg, #2f7fff, #00d4aa); }
 .av2 { background: linear-gradient(135deg, #f0b429, #e55a2b); }
 .av3 { background: linear-gradient(135deg, #b47fff, #2f7fff); }
