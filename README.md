@@ -134,7 +134,7 @@ src/
 <p align="center">
   <em>Avec nous, chaque ligne de code est une histoire.</em>
   <br />
-  <a href="mailto:hello@nexora.ci">hello@nexora.ci</a>
+  <a href="mailto:christiandoh29@gmail.com">christiandoh29@gmail.com</a>
   &nbsp;·&nbsp;
   <a href="tel:+2250103961828">+225 01 03 96 18 28</a>
 </p>

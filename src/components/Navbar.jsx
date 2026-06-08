@@ -28,8 +28,9 @@ export default function Navbar() {
   return (
     <nav className={`navbar${scrolled ? ' scrolled' : ''}`}>
       <div className="nav-inner">
-        <Link to="/" className="logo logo-img">
-          <img src={`${import.meta.env.BASE_URL}LOGO_NEXORA.png`} alt="Nexora Studio" />
+        <Link to="/" className="logo">
+          <span className="logo-mark"><img src={`${import.meta.env.BASE_URL}LOGO_NEXORA.png`} alt="" /></span>
+          <span className="logo-script">exora</span>
         </Link>
 
         <ul className={`nav-links${menuOpen ? ' open' : ''}`}>

@@ -5,7 +5,10 @@ export default function Footer() {
     <footer>
       <div className="footer-inner">
         <div className="footer-brand">
-          <Link to="/" className="logo logo-img"><img src={`${import.meta.env.BASE_URL}LOGO_NEXORA.png`} alt="Nexora Studio" /></Link>
+          <Link to="/" className="logo">
+            <span className="logo-mark"><img src={`${import.meta.env.BASE_URL}LOGO_NEXORA.png`} alt="" /></span>
+            <span className="logo-script">exora</span>
+          </Link>
           <p>Studio digital basé à Abidjan. <em>Avec nous, chaque ligne de code est une histoire.</em></p>
         </div>
         <div className="footer-col">
@@ -30,7 +33,7 @@ export default function Footer() {
         <div className="footer-col">
           <h4>Contact</h4>
           <ul>
-            <li><a href="mailto:hello@nexora.ci">hello@nexora.ci</a></li>
+            <li><a href="mailto:christiandoh29@gmail.com">christiandoh29@gmail.com</a></li>
             <li><a href="tel:+2250103961828">+225 01 03 96 18 28</a></li>
             <li><a href="#">Abidjan, Côte d'Ivoire</a></li>
             <li><a href="#">LinkedIn</a></li>

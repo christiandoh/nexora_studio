@@ -22,7 +22,7 @@ export default function CTA() {
           </SectionReveal>
           <SectionReveal delay={3}>
             <div className="cta-actions">
-              <a href="mailto:hello@nexora.ci" className="btn-cta-lg">Demander l'audit gratuit →</a>
+              <a href="mailto:christiandoh29@gmail.com" className="btn-cta-lg">Demander l'audit gratuit →</a>
               <a href="tel:+2250103961828" className="btn-ghost-lg"><Phone size={16} /> Nous appeler</a>
             </div>
           </SectionReveal>

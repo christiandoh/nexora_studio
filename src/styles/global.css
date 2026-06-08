@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Dancing+Script:wght@700&display=swap');
 
 :root[data-theme="dark"] {
   --bg: #040d1a;
@@ -191,13 +191,26 @@ body.desktop .cursor-ring { display: block; }
   text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.35rem;
 }
-.logo-img img {
-  height: 32px;
+.logo-mark {
+  display: flex;
+  align-items: center;
+}
+.logo-mark img {
+  height: 60px;
   width: auto;
   display: block;
 }
+.logo-script {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0;
+  line-height: 1;
+}
+
 .logo-dot {
   width: 8px; height: 8px;
   background: var(--accent);
