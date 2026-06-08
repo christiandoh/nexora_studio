@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import ThemeToggle from './ThemeToggle';
+import { useTheme } from '../themeContext';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const { pathname } = useLocation();
+  const { theme } = useTheme();
 
   useEffect(() => {
     setMenuOpen(false);
@@ -17,6 +19,14 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+  }, [menuOpen]);
 
   const navLinks = [
     { label: 'Services', to: '/services' },
@@ -33,7 +43,7 @@ export default function Navbar() {
           <span className="logo-script">exora</span>
         </Link>
 
-        <ul className={`nav-links${menuOpen ? ' open' : ''}`}>
+        <ul className="nav-links">
           {navLinks.map(link => (
             <li key={link.to}>
               <Link to={link.to} className={pathname === link.to ? 'active' : ''}>{link.label}</Link>
@@ -49,6 +59,38 @@ export default function Navbar() {
           <div className={`hamburger${menuOpen ? ' active' : ''}`} onClick={() => setMenuOpen(v => !v)}>
             <span></span><span></span><span></span>
           </div>
+        </div>
+      </div>
+
+      <div className={`nav-backdrop${menuOpen ? ' open' : ''}`} onClick={() => setMenuOpen(false)} />
+
+      <div className={`nav-drawer${menuOpen ? ' open' : ''}`}>
+        <div className="nav-drawer-header">
+          <Link to="/" className="logo" onClick={() => setMenuOpen(false)}>
+            <span className="logo-mark"><img src={`${import.meta.env.BASE_URL}LOGO_NEXORA.png`} alt="" /></span>
+            <span className="logo-script">exora</span>
+          </Link>
+          <div className={`hamburger active`} onClick={() => setMenuOpen(false)}>
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+
+        <ul className="nav-drawer-links">
+          {navLinks.map(link => (
+            <li key={link.to}>
+              <Link to={link.to} className={pathname === link.to ? 'active' : ''}>{link.label}</Link>
+            </li>
+          ))}
+        </ul>
+
+        <div className="nav-drawer-footer">
+          <div className="theme-row">
+            <span>Mode {theme === 'light' ? 'clair' : 'sombre'}</span>
+            <ThemeToggle />
+          </div>
+          <Link to="/contact" className="btn-cta" onClick={() => setMenuOpen(false)}>
+            Démarrer un projet →
+          </Link>
         </div>
       </div>
     </nav>
