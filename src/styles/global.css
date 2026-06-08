@@ -1392,6 +1392,8 @@ footer {
   .process-steps::before { display: none; }
   .nav-links { display: none; }
   .hamburger { display: flex; }
+  .logo-mark img { height: 36px; }
+  .logo-script { font-size: 1.3rem; }
 
   .nav-drawer {
     display: flex;
@@ -1404,11 +1406,13 @@ footer {
     background: var(--bg);
     border-right: 1px solid var(--border);
     z-index: 200;
-    padding: 2rem 1.5rem;
-    gap: 1.5rem;
+    padding: 1.5rem 1.25rem;
+    gap: 1.25rem;
     transform: translateX(-100%);
     transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1);
   }
+  .nav-drawer .logo-mark img { height: 40px; }
+  .nav-drawer .logo-script { font-size: 1.5rem; }
   .nav-drawer-header {
     display: flex;
     justify-content: space-between;
