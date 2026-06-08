@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './themeContext';
 import Cursor from './components/Cursor';
 import ScrollToTop from './components/ScrollToTop';
