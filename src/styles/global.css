@@ -269,27 +269,25 @@ section { padding: 7rem 2rem; position: relative; }
   gap: 1rem;
 }
 
-.theme-btn {
-  width: 44px; height: 24px;
+.theme-btn-icon {
+  width: 36px; height: 36px;
   background: var(--surface);
   border: 1px solid var(--border2);
-  border-radius: 12px;
-  position: relative;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  flex-shrink: 0;
-}
-.theme-btn::after {
-  content: '';
-  position: absolute;
-  width: 16px; height: 16px;
-  background: var(--accent);
   border-radius: 50%;
-  top: 3px; left: 4px;
-  transition: transform 0.3s cubic-bezier(.4,0,.2,1), background 0.3s ease;
-  box-shadow: 0 0 8px var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+  flex-shrink: 0;
+  color: var(--text2);
 }
-[data-theme="light"] .theme-btn::after { transform: translateX(18px); }
+.theme-btn-icon:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: scale(1.1);
+}
 
 .btn-cta {
   background: var(--accent);
