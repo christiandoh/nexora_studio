@@ -50,9 +50,9 @@ export default function HeroScroll() {
     const st = ScrollTrigger.create({
       trigger: sectionRef.current,
       start: 'top top',
-      end: `+=${FRAMES * 2}px`,
+      end: '+=600px',
       pin: true,
-      scrub: 1,
+      scrub: 1.5,
       onUpdate: (self) => updateFrame(self.progress * (FRAMES - 1)),
     });
 
