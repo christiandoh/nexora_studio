@@ -136,6 +136,7 @@ section { padding: 7rem 2rem; position: relative; }
   position: relative;
   height: 120vh;
   background: var(--bg);
+  padding: 0;
 }
 .hero-scroll-section .hero-scroll-canvas {
   position: absolute;
