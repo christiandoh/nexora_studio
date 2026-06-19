@@ -28,11 +28,12 @@ export default function Navbar() {
     }
   }, [menuOpen]);
 
+  const base = import.meta.env.BASE_URL || '/';
   const navLinks = [
-    { label: 'Services', to: '/services' },
-    { label: 'Processus', to: '/method' },
-    { label: 'Offres', to: '/offres' },
-    { label: 'Clients', to: '/' },
+    { label: 'Services', to: '/services', icon: `${base}icone/service.png` },
+    { label: 'Processus', to: '/method', icon: `${base}icone/processus.png` },
+    { label: 'Offres', to: '/offres', icon: `${base}icone/offre.png` },
+    { label: 'Clients', to: '/', icon: `${base}icone/clients.png` },
   ];
 
   return (
@@ -46,7 +47,10 @@ export default function Navbar() {
         <ul className="nav-links">
           {navLinks.map(link => (
             <li key={link.to}>
-              <Link to={link.to} className={pathname === link.to ? 'active' : ''}>{link.label}</Link>
+              <Link to={link.to} className={pathname === link.to ? 'active' : ''}>
+                <img src={link.icon} alt="" className="nav-icon" />
+                {link.label}
+              </Link>
             </li>
           ))}
         </ul>
@@ -78,7 +82,10 @@ export default function Navbar() {
         <ul className="nav-drawer-links">
           {navLinks.map(link => (
             <li key={link.to}>
-              <Link to={link.to} className={pathname === link.to ? 'active' : ''}>{link.label}</Link>
+              <Link to={link.to} className={pathname === link.to ? 'active' : ''}>
+                <img src={link.icon} alt="" className="nav-icon" />
+                {link.label}
+              </Link>
             </li>
           ))}
         </ul>

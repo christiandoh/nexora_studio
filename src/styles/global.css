@@ -132,6 +132,19 @@ section { padding: 7rem 2rem; position: relative; }
 }
 
 /* NAVBAR */
+.nav-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+.nav-links a,
+.nav-drawer-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
 .navbar {
   position: fixed;
   top: 0; left: 0; right: 0;
