@@ -1,6 +1,5 @@
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './themeContext';
-import Cursor from './components/Cursor';
 import ScrollToTop from './components/ScrollToTop';
 import Layout from './components/Layout';
 import HomePage from './pages/HomePage';
@@ -15,7 +14,6 @@ function App() {
     <HashRouter>
       <ThemeProvider>
         <ScrollToTop />
-        <Cursor />
         <Routes>
           <Route element={<Layout />}>
             <Route index element={<HomePage />} />
